@@ -22,7 +22,7 @@
 
 2048小游戏：  
 
-<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_2048.png" width = "600" alt="recover 2048" align=center />
+<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_2048.gif" width = "600" alt="recover 2048" align=center />
 
 贪吃蛇（掉帧严重，就不放动图了）：  
 
