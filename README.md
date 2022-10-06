@@ -1,25 +1,32 @@
 # 简介
 本项目是基于《操作系统真象还原》实现的AMD64架构（或者叫x86\_64架构）版本的操作系统，主要思路与代码与原书一致。  
-《操作系统真象还原》实现的操作系统运行在32位x86架构的处理器上，但是时代变了，现在我们早已迈入64位时代。于是我依据《操作系统真象还原》中的设计思路~~主要是复制作者代码~~实现了其64位版本。  
+《操作系统真象还原》实现的操作系统运行在32位x86架构的处理器上，但是现在我们早已迈入64位时代。于是我~~复制~~参考《操作系统真象还原》中的代码实现了其64位版本。  
 
 # 快速使用
 ## 步骤
 * x64 Linux下安装较新版本的gcc，nasm，bochs，GNU make等程序。
 * 克隆本仓库，进入源码目录。  
 * 然后`$ make run`就可以编译并启动bochs模拟器了。  
-在bochs 2.7，gcc 12.2.0，nasm 2.15.05，make 4.3 下测试成功。版本不同应该也不会有太大影响。
+本系统在bochs 2.7，gcc 12.2.0，nasm 2.15.05，make 4.3 环境下测试成功。部分软件版本不同应该也不会有太大影响。
 运行效果如下图：
 
-<img src="/home/yu/recover.png" width = "600" alt="recover shell" align=center />
+<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_shell.png" width = "600" alt="recover shell" align=center />
 
 
 ## 示例
 本操作系统内置2048，贪吃蛇等小游戏。  
 用recover写代码：  
 （终端没有实现输入输出重定向，下面cat与Linux下的cat行为不大一样）  
+
+<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_coding.gif" width = "600" alt="recover coding" align=center />
+
 2048小游戏：  
+
+<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_2048.png" width = "600" alt="recover 2048" align=center />
+
 贪吃蛇（掉帧严重，就不放动图了）：  
-<img src="/home/yu/recover_snake.png" width = "600" alt="recover snake" align=center />
+
+<img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_snake.png" width = "600" alt="recover snake" align=center />
 
 # 关于《操作系统真象还原》
 我读到过的相关书籍中最为通俗易懂的一本，详细又不失趣味性。即使显得有些啰嗦，作者也要变着法子让读者看懂（这么友好的书哪里找）。在众多操作系统相关的书中，我最终选择了这本~~唯一看得懂的~~书实现操作系统。
