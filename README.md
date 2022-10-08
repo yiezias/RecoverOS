@@ -17,6 +17,7 @@
 本操作系统内置2048，贪吃蛇等小游戏。  
 用recover写代码：  
 （终端没有实现输入输出重定向，下面cat与Linux下的cat行为不大一样）  
+（仅仅是展示一下写文本文件功能）
 
 <img src="https://github.com/agrdrg/RecoverOS/blob/main/images/recover_coding.gif" width = "600" alt="recover coding" align=center />
 
