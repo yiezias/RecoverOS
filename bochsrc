@@ -1,7 +1,4 @@
 
-# bochs configure
-
-#display_library: x, options="gui_debug"
 
 megs: 1024
 
