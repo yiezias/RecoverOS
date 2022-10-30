@@ -38,7 +38,7 @@ static void kernel_thread(thread_func func, void *arg) {
 	func(arg);
 }
 
-struct task_struct *running_thread(void) {
+struct task_struct *running_thread(void) {	//这里并不需要关中断，也不需要全局current，把作者rsp改成tss.ist就可以了
 	enum intr_stat old_stat = set_intr_stat(intr_off);
 	struct task_struct *running = current;
 	set_intr_stat(old_stat);
