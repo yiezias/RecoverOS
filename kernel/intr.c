@@ -46,18 +46,18 @@ enum intr_stat set_intr_stat(enum intr_stat stat) {
 static void pic_init(void) {
 	put_str("pic_init: start\n");
 	/*初始化主片*/
-	outb(PIC_M_CTRL, 0x11);	 //啥意思？
+	outb(PIC_M_CTRL, 0x11);
 	outb(PIC_M_DATA, 0x20);	 //初始中断向量号0x20
 
 	outb(PIC_M_DATA, 0x04);	 // IR2接从片
-	outb(PIC_M_DATA, 0x01);	 // 8086模式？
+	outb(PIC_M_DATA, 0x01);	 // 8086模式
 
 	/*初始化从片*/
-	outb(PIC_S_CTRL, 0x11);	 //？
+	outb(PIC_S_CTRL, 0x11);
 	outb(PIC_S_DATA, 0x28);	 //初始中断向量号0x28
 
 	outb(PIC_S_DATA, 0x02);	 //连接到主片IR2引脚
-	outb(PIC_S_DATA, 0x01);	 //？
+	outb(PIC_S_DATA, 0x01);
 
 	/*打开主片IR0,只接受时钟中断*/
 	outb(PIC_M_DATA, 0xfe);
